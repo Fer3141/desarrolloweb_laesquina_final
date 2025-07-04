@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+fondo-header {
+  background: var(--secondary-color);
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
@@ -56,6 +60,7 @@ h6 {
 .navbar {
   transition: var(--transition);
   backdrop-filter: blur(10px);
+  background: #f4ebe2;
 }
 
 .navbar-brand {
