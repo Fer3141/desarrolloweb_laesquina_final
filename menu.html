@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - La Esquina - Grupo 9: Rodrigo, Juan Manuel Meluzio, Carolina Degrossi, Maria Fernanda, Di Nocera Maria Virginia, Tomas Navatta - Comisión 2024</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/menu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-esquina">
+
+  <!-- Header -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3 py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/logo.png" alt="Logo La Esquina" class="logo-img me-2">
+          <span class="brand-text">La Esquina</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="index.html">
+                <i class="fas fa-home me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-medium" href="menu.html">
+                <i class="fas fa-coffee me-1"></i>Pedido
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="nosotros.html">
+                <i class="fas fa-users me-1"></i>Nosotros
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="contacto.html">
+                <i class="fas fa-envelope me-1"></i>Contacto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="perfil.html">
+                <i class="fas fa-user me-1"></i>Bienvenido Juan
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Estado del pedido -->
+  <div class="container mt-4">
+    <a href="estado-pedido.html" class="text-decoration-none">
+      <div class="alert alert-success d-flex align-items-center shadow-sm estado-pedido-alert" role="alert">
+        <div class="alert-icon me-3">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="flex-grow-1">
+          <strong>¡Tu pedido está en preparación!</strong><br>
+          <small>Estará listo en aproximadamente: <strong>7 minutos</strong> - Haz clic para ver detalles</small>
+        </div>
+        <div class="alert-arrow">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Contenido principal -->
+  <main class="flex-grow-1">
+    <section class="container py-4">
+      <div class="row">
+        <!-- Menú lateral -->
+        <aside class="col-lg-3 col-md-4 mb-4">
+          <div class="sidebar-menu bg-white rounded-3 shadow-sm p-4 sticky-menu">
+            <h3 class="h4 fw-bold mb-4 text-primary">
+              <i class="fas fa-utensils me-2"></i>Menú
+            </h3>
+            
+            <div class="mb-4">
+              <h6 class="fw-bold text-uppercase text-muted mb-3 small">Catálogo</h6>
+              <nav class="nav flex-column">
+                <a class="categoria-link active" data-categoria="todos">
+                  <i class="fas fa-th-large me-2"></i>Todos los productos
+                </a>
+                <a class="categoria-link" data-categoria="cafe">
+                  <i class="fas fa-coffee me-2"></i>Café
+                </a>
+                <a class="categoria-link" data-categoria="alfajores">
+                  <i class="fas fa-cookie-bite me-2"></i>Alfajores
+                </a>
+                <a class="categoria-link" data-categoria="tortas">
+                  <i class="fas fa-birthday-cake me-2"></i>Tortas
+                </a>
+                <a class="categoria-link" data-categoria="sale">
+                  <i class="fas fa-tags me-2"></i>Promociones
+                </a>
+              </nav>
+            </div>
+
+            <div>
+              <h6 class="fw-bold text-uppercase text-muted mb-3 small">Mis productos</h6>
+              <nav class="nav flex-column">
+                <a class="categoria-link" data-categoria="favorito">
+                  <i class="fas fa-heart me-2"></i>Favoritos
+                </a>
+                <a class="categoria-link" data-categoria="pedidoAnteriormente">
+                  <i class="fas fa-history me-2"></i>Pedidos anteriores
+                </a>
+              </nav>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Productos -->
+        <div class="col-lg-9 col-md-8">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="h3 fw-bold text-primary mb-0">Nuestros Productos</h2>
+            <div class="view-toggle">
+              <button class="btn btn-outline-secondary btn-sm me-2" id="gridView">
+                <i class="fas fa-th"></i>
+              </button>
+              <button class="btn btn-outline-secondary btn-sm" id="listView">
+                <i class="fas fa-list"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="row g-4" id="productos-lista">
+            <!-- Producto 1 -->
+            <div class="col-xl-4 col-lg-6 col-md-6 producto" data-categoria="cafe">
+              <div class="card product-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper position-relative">
+                  <img src="img/taza1.png" class="card-img-top" alt="Café de Autor">
+                  <button class="btn-favorite position-absolute" data-favorito="false">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <div class="card-overlay">
+                    <div class="overlay-content">
+                      <p class="text-white small mb-2">Café premium con granos seleccionados</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bold mb-2">Café de Autor</h5>
+                  <p class="card-text text-muted mb-3">Elaborado con granos seleccionados y tueste artesanal para una experiencia única.</p>
+                  <div class="price-section mb-3">
+                    <span class="price-current h5 text-primary fw-bold">$2.500</span>
+                  </div>
+                  <div class="quantity-controls mb-3">
+                    <div class="input-group input-group-sm">
+                      <button class="btn btn-outline-secondary btn-restar" type="button">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <input type="number" class="form-control text-center cantidad-input fw-bold" value="1" min="1" readonly>
+                      <button class="btn btn-outline-secondary btn-sumar" type="button">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary w-100 btn-pedir">
+                    <i class="fas fa-cart-plus me-2"></i>Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col-xl-4 col-lg-6 col-md-6 producto" data-categoria="pedidoAnteriormente favorito sale">
+              <div class="card product-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper position-relative">
+                  <img src="img/cafe_y_medialuna.png" class="card-img-top" alt="Combo del Día">
+                  <button class="btn-favorite position-absolute favorited" data-favorito="true">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <div class="badge-promo">¡Oferta!</div>
+                  <div class="card-overlay">
+                    <div class="overlay-content">
+                      <p class="text-white small mb-2">Combo especial con descuento</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bold mb-2">Combo del Día</h5>
+                  <p class="card-text text-muted mb-3">Un café premium + una medialuna recién horneada a precio especial.</p>
+                  <div class="price-section mb-3">
+                    <span class="price-old text-decoration-line-through text-muted me-2">$3.000</span>
+                    <span class="price-current h5 text-primary fw-bold">$2.200</span>
+                  </div>
+                  <div class="quantity-controls mb-3">
+                    <div class="input-group input-group-sm">
+                      <button class="btn btn-outline-secondary btn-restar" type="button">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <input type="number" class="form-control text-center cantidad-input fw-bold" value="1" min="1" readonly>
+                      <button class="btn btn-outline-secondary btn-sumar" type="button">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary w-100 btn-pedir">
+                    <i class="fas fa-cart-plus me-2"></i>Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col-xl-4 col-lg-6 col-md-6 producto" data-categoria="cafe pedidoAnteriormente">
+              <div class="card product-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper position-relative">
+                  <img src="img/cafe_frio.png" class="card-img-top" alt="Café Frío">
+                  <button class="btn-favorite position-absolute" data-favorito="false">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <div class="card-overlay">
+                    <div class="overlay-content">
+                      <p class="text-white small mb-2">Perfecto para días calurosos</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bold mb-2">Café Frío</h5>
+                  <p class="card-text text-muted mb-3">Refrescante bebida fría ideal para los días de calor, con todo el sabor del café.</p>
+                  <div class="price-section mb-3">
+                    <span class="price-current h5 text-primary fw-bold">$2.800</span>
+                  </div>
+                  <div class="quantity-controls mb-3">
+                    <div class="input-group input-group-sm">
+                      <button class="btn btn-outline-secondary btn-restar" type="button">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <input type="number" class="form-control text-center cantidad-input fw-bold" value="1" min="1" readonly>
+                      <button class="btn btn-outline-secondary btn-sumar" type="button">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary w-100 btn-pedir">
+                    <i class="fas fa-cart-plus me-2"></i>Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="col-xl-4 col-lg-6 col-md-6 producto" data-categoria="favorito alfajores">
+              <div class="card product-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper position-relative">
+                  <img src="img/alfajor_artesanal.jpg" class="card-img-top" alt="Alfajor Artesanal">
+                  <button class="btn-favorite position-absolute favorited" data-favorito="true">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <div class="card-overlay">
+                    <div class="overlay-content">
+                      <p class="text-white small mb-2">Hecho artesanalmente</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bold mb-2">Alfajor Artesanal</h5>
+                  <p class="card-text text-muted mb-3">Alfajor de chocolate relleno con dulce de leche casero.</p>
+                  <div class="price-section mb-3">
+                    <span class="price-current h5 text-primary fw-bold">$1.800</span>
+                  </div>
+                  <div class="quantity-controls mb-3">
+                    <div class="input-group input-group-sm">
+                      <button class="btn btn-outline-secondary btn-restar" type="button">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <input type="number" class="form-control text-center cantidad-input fw-bold" value="1" min="1" readonly>
+                      <button class="btn btn-outline-secondary btn-sumar" type="button">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary w-100 btn-pedir">
+                    <i class="fas fa-cart-plus me-2"></i>Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="col-xl-4 col-lg-6 col-md-6 producto" data-categoria="tortas">
+              <div class="card product-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper position-relative">
+                  <img src="img/torta_chocolate.jpg" class="card-img-top" alt="Torta de Chocolate">
+                  <button class="btn-favorite position-absolute" data-favorito="false">
+                    <i class="far fa-heart"></i>
+                  </button>
+                  <div class="card-overlay">
+                    <div class="overlay-content">
+                      <p class="text-white small mb-2">Irresistible tentación</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bold mb-2">Torta de Chocolate</h5>
+                  <p class="card-text text-muted mb-3">Bizcocho húmedo de cacao con mousse de chocolate amargo y frambuesas</p>
+                  <div class="price-section mb-3">
+                    <span class="price-current h5 text-primary fw-bold">$4.500</span>
+                  </div>
+                  <div class="quantity-controls mb-3">
+                    <div class="input-group input-group-sm">
+                      <button class="btn btn-outline-secondary btn-restar" type="button">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <input type="number" class="form-control text-center cantidad-input fw-bold" value="1" min="1" readonly>
+                      <button class="btn btn-outline-secondary btn-sumar" type="button">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary w-100 btn-pedir">
+                    <i class="fas fa-cart-plus me-2"></i>Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="col-xl-4 col-lg-6 col-md-6 producto" data-categoria="favorito tortas">
+              <div class="card product-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper position-relative">
+                  <img src="img/carrot_cake.jpg" class="card-img-top" alt="Carrot Cake">
+                  <button class="btn-favorite position-absolute favorited" data-favorito="true">
+                    <i class="fas fa-heart"></i>
+                  </button>
+                  <div class="card-overlay">
+                    <div class="overlay-content">
+                      <p class="text-white small mb-2">Receta tradicional</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-bold mb-2">Torta de Zanahoria</h5>
+                  <p class="card-text text-muted mb-3">Bizcochuelo de zanahoria con crema de queso, nueces y canela.</p>
+                  <div class="price-section mb-3">
+                    <span class="price-current h5 text-primary fw-bold">$4.200</span>
+                  </div>
+                  <div class="quantity-controls mb-3">
+                    <div class="input-group input-group-sm">
+                      <button class="btn btn-outline-secondary btn-restar" type="button">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <input type="number" class="form-control text-center cantidad-input fw-bold" value="1" min="1" readonly>
+                      <button class="btn btn-outline-secondary btn-sumar" type="button">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary w-100 btn-pedir">
+                    <i class="fas fa-cart-plus me-2"></i>Agregar al carrito
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Carrito flotante -->
+  <div id="carrito-toggle" class="position-fixed bottom-0 end-0 m-4">
+    <button class="btn btn-primary rounded-circle p-3 position-relative shadow-lg cart-float-btn" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas">
+      <i class="fas fa-shopping-cart fs-4"></i>
+      <span id="carrito-cantidad" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+    </button>
+  </div>
+
+  <!-- Carrito Bootstrap -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas">
+    <div class="offcanvas-header bg-primary text-white">
+      <h5 class="offcanvas-title fw-bold">
+        <i class="fas fa-shopping-cart me-2"></i>Tu Pedido
+      </h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="carrito-contenido">
+        <ul id="carrito-lista" class="list-group mb-4"></ul>
+        <div id="mensaje-vacio" class="text-center py-5">
+          <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+          <p class="text-muted">Tu carrito está vacío</p>
+          <p class="small text-muted">Agrega productos para comenzar tu pedido</p>
+        </div>
+      </div>
+      
+      <div id="carrito-resumen" class="d-none">
+        <div class="border-top pt-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="fw-bold">Total:</span>
+            <span class="h4 text-primary fw-bold">$<span id="carrito-total">0</span></span>
+          </div>
+          <button class="btn btn-success w-100 mb-2 btn-confirmar-pedido">
+            <i class="fas fa-check me-2"></i>Confirmar Pedido
+          </button>
+          <button id="btn-vaciar-carrito" class="btn btn-outline-danger w-100">
+            <i class="fas fa-trash me-2"></i>Vaciar Carrito
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-esquina py-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="img/logo.png" alt="Logo La Esquina" class="footer-logo me-2">
+            <span class="h5 mb-0 text-primary fw-bold">La Esquina</span>
+          </div>
+          <p class="text-muted mb-3">El mejor café artesanal de la ciudad. Calidad premium sin esperas.</p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-3">Enlaces</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="footer-link">Inicio</a></li>
+            <li class="mb-2"><a href="menu.html" class="footer-link">Menú</a></li>
+            <li class="mb-2"><a href="nosotros.html" class="footer-link">Nosotros</a></li>
+            <li class="mb-2"><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Información</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="footer-link">Términos y Condiciones</a></li>
+            <li class="mb-2"><a href="#" class="footer-link">Política de Privacidad</a></li>
+            <li class="mb-2"><a href="ayuda.html" class="footer-link">Ayuda</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Contacto</h6>
+          <div class="contact-info">
+            <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Av. Siempre Viva 123, CABA</p>
+            <p class="mb-2"><i class="fas fa-phone me-2 text-primary"></i>+54 9 11 1234 5678</p>
+            <p class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i>info@laesquina.com</p>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 text-muted small">© 2024 La Esquina. Todos los derechos reservados.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0 text-muted small">
+            <strong>Grupo 9:</strong> Rodrigo, Juan Manuel Meluzio, Carolina Degrossi, Maria Fernanda, Di Nocera Maria Virginia, Tomas Navatta
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+   <!-- Script filtro -->
+  <script>
+    document.querySelectorAll('.categoria-link').forEach(link => {
+      link.addEventListener('click', function () {
+        document.querySelectorAll('.categoria-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        const categoria = this.getAttribute('data-categoria');
+        document.querySelectorAll('.producto').forEach(prod => {
+          if (categoria === 'todos' || prod.getAttribute('data-categoria').includes(categoria)) {
+            prod.style.display = '';
+          } else {
+            prod.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+  <script>
+  // Manejo de cantidad
+  document.querySelectorAll('.producto').forEach(producto => {
+    const input = producto.querySelector('.cantidad-input');
+    const btnSumar = producto.querySelector('.btn-sumar');
+    const btnRestar = producto.querySelector('.btn-restar');
+
+    btnSumar.addEventListener('click', () => {
+      input.value = parseInt(input.value) + 1;
+    });
+
+    btnRestar.addEventListener('click', () => {
+      if (parseInt(input.value) > 1) input.value = parseInt(input.value) - 1;
+    });
+  });
+
+  // Carrito
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+ const actualizarCarrito = () => {
+  const lista = document.getElementById('carrito-lista');
+  const total = document.getElementById('carrito-total');
+  const badge = document.getElementById('carrito-cantidad');
+  const mensajeVacio = document.getElementById('mensaje-vacio');
+  const resumen = document.getElementById('carrito-resumen');
+
+  lista.innerHTML = '';
+  let totalPrecio = 0;
+  let cantidadTotal = 0;
+
+  if (carrito.length === 0) {
+    mensajeVacio.style.display = 'block';
+    resumen.classList.add('d-none');
+  } else {
+    mensajeVacio.style.display = 'none';
+    resumen.classList.remove('d-none');
+  }
+
+  carrito.forEach(item => {
+    const li = document.createElement('li');
+    li.className = 'list-group-item d-flex justify-content-between align-items-center';
+    li.innerHTML = `
+      <span>${item.nombre} × ${item.cantidad}</span>
+      <span>$${item.precio * item.cantidad}</span>
+    `;
+    lista.appendChild(li);
+    totalPrecio += item.precio * item.cantidad;
+    cantidadTotal += item.cantidad;
+  });
+
+  total.textContent = totalPrecio;
+  badge.textContent = cantidadTotal;
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+};
+
+
+
+  document.querySelectorAll('.btn-pedir').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.producto');
+    const nombre = card.querySelector('.card-title').textContent.trim();
+    const cantidad = parseInt(card.querySelector('.cantidad-input').value);
+    const precioTexto = card.querySelector('.price-current').textContent.trim();
+    const precio = parseInt(precioTexto.replace('$', '').replace('.', '').trim());
+
+    const existente = carrito.find(p => p.nombre === nombre);
+    if (existente) {
+      existente.cantidad += cantidad;
+    } else {
+      carrito.push({ nombre, cantidad, precio });
+    }
+
+    actualizarCarrito();
+  });
+});
+
+
+  actualizarCarrito();
+  document.getElementById('btn-vaciar-carrito').addEventListener('click', () => {
+  carrito = [];
+  actualizarCarrito();
+});
+document.querySelector('.btn-success').addEventListener('click', () => {
+  if (carrito.length === 0) {
+    Swal.fire({
+      icon: 'info',
+      title: 'Carrito vacío',
+      text: 'Agrega productos antes de confirmar tu pedido.',
+      confirmButtonColor: '#d33'
+    });
+    return;
+  }
+
+  Swal.fire({
+    icon: 'success',
+    title: '¡Compra exitosa!',
+    text: 'Tu pedido ha sido confirmado. En breve comenzaremos a prepararlo.',
+    confirmButtonText: 'Aceptar',
+    confirmButtonColor: '#198754'
+  }).then(() => {
+    carrito = [];
+    actualizarCarrito();
+  });
+});
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

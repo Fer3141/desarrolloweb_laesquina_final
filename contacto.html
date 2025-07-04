@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - La Esquina - Grupo 9: Rodrigo, Juan Manuel Meluzio, Carolina Degrossi, Maria Fernanda, Di Nocera Maria Virginia, Tomas Navatta - Comisión 2024</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/contacto.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-esquina">
+
+  <!-- Header -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3 py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/logo.png" alt="Logo La Esquina" class="logo-img me-2">
+          <span class="brand-text">La Esquina</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="index.html">
+                <i class="fas fa-home me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="menu.html">
+                <i class="fas fa-coffee me-1"></i>Pedido
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="nosotros.html">
+                <i class="fas fa-users me-1"></i>Nosotros
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-medium" href="contacto.html">
+                <i class="fas fa-envelope me-1"></i>Contacto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="perfil.html">
+                <i class="fas fa-user me-1"></i>Bienvenido Juan
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="contact-hero py-5">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold text-primary mb-3">Contactanos</h1>
+          <p class="lead text-muted">Estamos aquí para ayudarte. Envíanos tu consulta y te responderemos lo antes posible.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Formulario de Contacto -->
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-5">
+              <h3 class="fw-bold mb-4 text-primary">
+                <i class="fas fa-paper-plane me-2"></i>Envíanos un mensaje
+              </h3>
+              
+              <form id="form-contacto" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="nombre" class="form-label fw-medium">
+                      <i class="fas fa-user me-1 text-primary"></i>Nombre completo *
+                    </label>
+                    <input type="text" class="form-control form-control-lg" id="nombre" name="nombre" required>
+                    <div class="invalid-feedback">
+                      Por favor, ingresa tu nombre completo.
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label for="email" class="form-label fw-medium">
+                      <i class="fas fa-envelope me-1 text-primary"></i>Correo electrónico *
+                    </label>
+                    <input type="email" class="form-control form-control-lg" id="email" name="email" required>
+                    <div class="invalid-feedback">
+                      Por favor, ingresa un correo electrónico válido.
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label for="telefono" class="form-label fw-medium">
+                      <i class="fas fa-phone me-1 text-primary"></i>Teléfono
+                    </label>
+                    <input type="tel" class="form-control form-control-lg" id="telefono" name="telefono" placeholder="+54 9 11 1234 5678">
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <label for="asunto" class="form-label fw-medium">
+                      <i class="fas fa-tag me-1 text-primary"></i>Asunto *
+                    </label>
+                    <select class="form-select form-select-lg" id="asunto" name="asunto" required>
+                      <option value="">Selecciona un asunto</option>
+                      <option value="consulta-general">Consulta General</option>
+                      <option value="problema-pedido">Problema con Pedido</option>
+                      <option value="sugerencia">Sugerencia</option>
+                      <option value="reclamo">Reclamo</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor, selecciona un asunto.
+                    </div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <label for="mensaje" class="form-label fw-medium">
+                      <i class="fas fa-comment me-1 text-primary"></i>Mensaje *
+                    </label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    <div class="invalid-feedback">
+                      Por favor, escribe tu mensaje.
+                    </div>
+                    <div class="form-text">Mínimo 10 caracteres</div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="acepto-terminos" required>
+                      <label class="form-check-label" for="acepto-terminos">
+                        Acepto los <a href="#" class="text-primary">términos y condiciones</a> y la <a href="#" class="text-primary">política de privacidad</a> *
+                      </label>
+                      <div class="invalid-feedback">
+                        Debes aceptar los términos y condiciones.
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary btn-lg px-5 py-3">
+                      <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Información de Contacto -->
+        <div class="col-lg-4">
+          <div class="contact-info-section">
+            <!-- Información Principal -->
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-body p-4">
+                <h4 class="fw-bold mb-4 text-primary">
+                  <i class="fas fa-info-circle me-2"></i>Información de Contacto
+                </h4>
+                
+                <div class="contact-item mb-4">
+                  <div class="d-flex align-items-start">
+                    <div class="contact-icon me-3">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold mb-1">Dirección</h6>
+                      <p class="text-muted mb-0">Av. Siempre Viva 123<br>Ciudad Autónoma de Buenos Aires</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="contact-item mb-4">
+                  <div class="d-flex align-items-start">
+                    <div class="contact-icon me-3">
+                      <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold mb-1">Teléfono</h6>
+                      <p class="text-muted mb-0">
+                        <a href="tel:+5491112345678" class="text-decoration-none">+54 9 11 1234 5678</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="contact-item mb-4">
+                  <div class="d-flex align-items-start">
+                    <div class="contact-icon me-3">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold mb-1">Email</h6>
+                      <p class="text-muted mb-0">
+                        <a href="mailto:contacto@laesquina.com" class="text-decoration-none">contacto@laesquina.com</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="d-flex align-items-start">
+                    <div class="contact-icon me-3">
+                      <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold mb-1">Horarios de Atención</h6>
+                      <p class="text-muted mb-1">Lunes a Viernes: 7:00 - 20:00</p>
+                      <p class="text-muted mb-1">Sábados: 8:00 - 18:00</p>
+                      <p class="text-muted mb-0">Domingos: 9:00 - 16:00</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-body p-4">
+                <h5 class="fw-bold mb-3 text-primary">
+                  <i class="fas fa-share-alt me-2"></i>Síguenos
+                </h5>
+                <div class="social-links-contact">
+                  <a href="#" class="social-link-contact me-3">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                  </a>
+                  <a href="#" class="social-link-contact me-3">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                  </a>
+                  <a href="#" class="social-link-contact me-3">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                  </a>
+                  <a href="#" class="social-link-contact">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Rápido -->
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h5 class="fw-bold mb-3 text-primary">
+                  <i class="fas fa-question-circle me-2"></i>Preguntas Frecuentes
+                </h5>
+                <div class="faq-quick">
+                  <div class="faq-item-quick mb-3">
+                    <h6 class="fw-medium mb-1">¿Cuánto tardan en responder?</h6>
+                    <p class="text-muted small mb-0">Respondemos en menos de 24 horas</p>
+                  </div>
+                  <div class="faq-item-quick mb-3">
+                    <h6 class="fw-medium mb-1">¿Puedo cancelar mi pedido?</h6>
+                    <p class="text-muted small mb-0">Sí, mientras no esté en preparación</p>
+                  </div>
+                  <div class="faq-item-quick">
+                    <h6 class="fw-medium mb-1">¿Hacen delivery?</h6>
+                    <p class="text-muted small mb-0">Por ahora solo retiro en local</p>
+                  </div>
+                </div>
+                <a href="ayuda.html" class="btn btn-outline-primary btn-sm w-100 mt-3">
+                  <i class="fas fa-external-link-alt me-1"></i>Ver todas las preguntas
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-esquina py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="img/logo.png" alt="Logo La Esquina" class="footer-logo me-2">
+            <span class="h5 mb-0 text-primary fw-bold">La Esquina</span>
+          </div>
+          <p class="text-muted mb-3">El mejor café artesanal de la ciudad. Calidad premium sin esperas.</p>
+          <div class="social-links">
+            <a href="#" class="social-link me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link me-3"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-3">Enlaces</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="footer-link">Inicio</a></li>
+            <li class="mb-2"><a href="menu.html" class="footer-link">Menú</a></li>
+            <li class="mb-2"><a href="nosotros.html" class="footer-link">Nosotros</a></li>
+            <li class="mb-2"><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Información</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="footer-link">Términos y Condiciones</a></li>
+            <li class="mb-2"><a href="#" class="footer-link">Política de Privacidad</a></li>
+            <li class="mb-2"><a href="ayuda.html" class="footer-link">Ayuda</a></li>
+            <li class="mb-2"><a href="#" class="footer-link">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Contacto</h6>
+          <div class="contact-info">
+            <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Av. Siempre Viva 123, CABA</p>
+            <p class="mb-2"><i class="fas fa-phone me-2 text-primary"></i>+54 9 11 1234 5678</p>
+            <p class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i>info@laesquina.com</p>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 text-muted small">© 2024 La Esquina. Todos los derechos reservados.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0 text-muted small">
+            <strong>Grupo 9:</strong> Rodrigo, Juan Manuel Meluzio, Carolina Degrossi, Maria Fernanda, Di Nocera Maria Virginia, Tomas Navatta
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+   <script>
+  document.getElementById('form-contacto').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    // Función auxiliar para validar el formato del email
+    function validarEmail(correo) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
+    }
+
+    // Validaciones
+    if (!nombre || !email || !mensaje) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Formulario incompleto',
+        text: 'Por favor completá todos los campos antes de enviar.',
+        confirmButtonColor: '#dc3545'
+      });
+      return;
+    }
+
+    if (!validarEmail(email)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Correo inválido',
+        text: 'Ingresá un correo electrónico válido.',
+        confirmButtonColor: '#dc3545'
+      });
+      return;
+    }
+
+    // Si todo está correcto
+    Swal.fire({
+      icon: 'success',
+      title: '¡Mensaje enviado!',
+      text: 'Nos pondremos en contacto contigo pronto.',
+      confirmButtonColor: '#198754'
+    });
+
+    // Resetear formulario
+    this.reset();
+  });
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

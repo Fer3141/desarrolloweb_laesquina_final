@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Esquina - Grupo 9: Rodrigo, Juan Manuel Meluzio, Carolina Degrossi, Maria Fernanda, Di Nocera Maria Virginia, Tomas Navatta - Comisión 2024</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-esquina">
+
+  <!-- Header -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3 py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/logo.png" alt="Logo La Esquina" class="logo-img me-2">
+          <span class="brand-text">La Esquina</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active fw-medium" href="index.html">
+                <i class="fas fa-home me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="menu.html">
+                <i class="fas fa-coffee me-1"></i>Pedido
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="nosotros.html">
+                <i class="fas fa-users me-1"></i>Nosotros
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="contacto.html">
+                <i class="fas fa-envelope me-1"></i>Contacto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="perfil.html">
+                <i class="fas fa-user me-1"></i>Bienvenido Juan
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Banner principal -->
+  <main>
+    <section class="banner-principal text-white d-flex align-items-center justify-content-center position-relative">
+      <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+      <div class="container position-relative text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h1 class="display-3 fw-bold mb-4 text-shadow">
+              Pedí tu café por aquí y no hagas más filas
+            </h1>
+            <p class="lead mb-4 text-shadow">
+              Disfruta del mejor café artesanal sin esperas. Ordena desde tu celular y retira cuando esté listo.
+            </p>
+            <a href="menu.html" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg">
+              <i class="fas fa-shopping-cart me-2"></i>Hacer Pedido
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Destacados -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="display-5 fw-bold text-primary mb-3">Productos Destacados</h2>
+            <p class="lead text-muted">Descubre nuestras especialidades más populares</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card product-card h-100 border-0 shadow-sm">
+              <div class="card-img-wrapper">
+                <img src="img/taza1.png" class="card-img-top" alt="Café de Autor">
+                <div class="card-overlay">
+                  <a href="menu.html" class="btn btn-primary btn-sm rounded-pill">
+                    <i class="fas fa-plus me-1"></i>Agregar
+                  </a>
+                </div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold mb-2">Café de Autor</h5>
+                <p class="card-text text-muted mb-3">Elaborado con granos seleccionados y tueste artesanal para una experiencia única.</p>
+                <div class="price-tag">
+                  <span class="h5 text-primary fw-bold">$2.500</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card product-card h-100 border-0 shadow-sm">
+              <div class="card-img-wrapper">
+                <img src="img/cafe_y_medialuna.png" class="card-img-top" alt="Combo del Día">
+                <div class="card-overlay">
+                  <a href="menu.html" class="btn btn-primary btn-sm rounded-pill">
+                    <i class="fas fa-plus me-1"></i>Agregar
+                  </a>
+                </div>
+                <div class="badge-promo">¡Oferta!</div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold mb-2">Combo del Día</h5>
+                <p class="card-text text-muted mb-3">Un café premium + una medialuna recién horneada a precio especial.</p>
+                <div class="price-tag">
+                  <span class="text-decoration-line-through text-muted me-2">$3.000</span>
+                  <span class="h5 text-primary fw-bold">$2.200</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card product-card h-100 border-0 shadow-sm">
+              <div class="card-img-wrapper">
+                <img src="img/cafe_frio.png" class="card-img-top" alt="Café Frío">
+                <div class="card-overlay">
+                  <a href="menu.html" class="btn btn-primary btn-sm rounded-pill">
+                    <i class="fas fa-plus me-1"></i>Agregar
+                  </a>
+                </div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold mb-2">Café Frío</h5>
+                <p class="card-text text-muted mb-3">Refrescante bebida fría ideal para los días de calor, con todo el sabor del café.</p>
+                <div class="price-tag">
+                  <span class="h5 text-primary fw-bold">$2.800</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Beneficios -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="display-5 fw-bold text-primary mb-3">¿Por qué elegir La Esquina?</h2>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+              <div class="feature-icon mb-3">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h5 class="fw-bold mb-2">Sin Esperas</h5>
+              <p class="text-muted">Ordena desde tu celular y retira cuando esté listo</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+              <div class="feature-icon mb-3">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h5 class="fw-bold mb-2">Café Premium</h5>
+              <p class="text-muted">Granos seleccionados y tueste artesanal diario</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+              <div class="feature-icon mb-3">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h5 class="fw-bold mb-2">Fácil y Rápido</h5>
+              <p class="text-muted">Interfaz intuitiva para ordenar en segundos</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="text-center">
+              <div class="feature-icon mb-3">
+                <i class="fas fa-heart"></i>
+              </div>
+              <h5 class="fw-bold mb-2">Hecho con Amor</h5>
+              <p class="text-muted">Cada producto preparado con dedicación y cariño</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios con Carrusel -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="display-5 fw-bold text-primary mb-3">Lo que dicen nuestros clientes</h2>
+            <p class="lead text-muted">Experiencias reales de quienes ya probaron La Esquina</p>
+          </div>
+        </div>
+        <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="testimonial-card text-center p-4">
+                    <div class="stars mb-3">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div>
+                    <blockquote class="blockquote">
+                      <p class="mb-3 fs-5">"Excelente atención y café delicioso. La app es súper fácil de usar y nunca más hice fila. ¡Lo recomiendo 100%!"</p>
+                      <footer class="blockquote-footer mt-3">
+                        <strong>Lucía Martínez</strong>, clienta frecuente
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="testimonial-card text-center p-4">
+                    <div class="stars mb-3">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div>
+                    <blockquote class="blockquote">
+                      <p class="mb-3 fs-5">"Pido desde el bondi y cuando llego ya está listo. El café es de primera calidad y los precios son justos."</p>
+                      <footer class="blockquote-footer mt-3">
+                        <strong>Carlos González</strong>, usuario de la app
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="testimonial-card text-center p-4">
+                    <div class="stars mb-3">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div>
+                    <blockquote class="blockquote">
+                      <p class="mb-3 fs-5">"Me encanta el combo del día. La relación precio-calidad es excelente y el servicio es muy rápido."</p>
+                      <footer class="blockquote-footer mt-3">
+                        <strong>Ana Torres</strong>, clienta habitual
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles del carrusel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev">
+            <div class="carousel-control-icon">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next">
+            <div class="carousel-control-icon">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-esquina py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="img/logo.png" alt="Logo La Esquina" class="footer-logo me-2">
+            <span class="h5 mb-0 text-primary fw-bold">La Esquina</span>
+          </div>
+          <p class="text-muted mb-3">El mejor café artesanal de la ciudad. Calidad premium sin esperas.</p>
+          <div class="social-links">
+            <a href="#" class="social-link me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link me-3"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-3">Enlaces</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="footer-link">Inicio</a></li>
+            <li class="mb-2"><a href="menu.html" class="footer-link">Menú</a></li>
+            <li class="mb-2"><a href="nosotros.html" class="footer-link">Nosotros</a></li>
+            <li class="mb-2"><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Información</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="footer-link">Términos y Condiciones</a></li>
+            <li class="mb-2"><a href="#" class="footer-link">Política de Privacidad</a></li>
+            <li class="mb-2"><a href="ayuda.html" class="footer-link">Ayuda</a></li>
+            <li class="mb-2"><a href="#" class="footer-link">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Contacto</h6>
+          <div class="contact-info">
+            <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Av. Siempre Viva 123, CABA</p>
+            <p class="mb-2"><i class="fas fa-phone me-2 text-primary"></i>+54 9 11 1234 5678</p>
+            <p class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i>info@laesquina.com</p>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 text-muted small">
+            © 2024 La Esquina. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0 text-muted small">
+            <strong>Grupo 9:</strong> Rodrigo, Juan Manuel Meluzio, Carolina Degrossi, Maria Fernanda, Di Nocera Maria Virginia, Tomas Navatta
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

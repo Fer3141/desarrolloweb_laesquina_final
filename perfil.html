@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - La Esquina - Grupo 9: Rodrigo, Juan Manuel Meluzio, Carolina Degrossi, Maria Fernanda, Di Nocera Maria Virginia, Tomas Navatta - Comisión 2024</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/perfil.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-esquina">
+
+  <!-- Header -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3 py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/logo.png" alt="Logo La Esquina" class="logo-img me-2">
+          <span class="brand-text">La Esquina</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="index.html">
+                <i class="fas fa-home me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="menu.html">
+                <i class="fas fa-coffee me-1"></i>Pedido
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="nosotros.html">
+                <i class="fas fa-users me-1"></i>Nosotros
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="contacto.html">
+                <i class="fas fa-envelope me-1"></i>Contacto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-medium" href="perfil.html">
+                <i class="fas fa-user me-1"></i>Hola Juan
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Sidebar -->
+        <aside class="col-lg-3 col-md-4 mb-4">
+          <div class="profile-sidebar bg-white rounded-3 shadow-sm p-4">
+            <div class="text-center mb-4">
+              <div class="profile-avatar mb-3">
+                <img src="img/logo.png" alt="Avatar" class="rounded-circle">
+              </div>
+              <h4 class="fw-bold mb-1">Juan Manuel</h4>
+              <p class="text-muted mb-2">Cliente Premium</p>
+              <div class="points-badge">
+                <i class="fas fa-star text-warning me-1"></i>
+                <span class="fw-bold">125 puntos</span>
+              </div>
+            </div>
+            
+            <nav class="profile-nav">
+              <a class="profile-nav-link active" data-section="inicio">
+                <i class="fas fa-home me-2"></i>Principal
+              </a>
+              <a class="profile-nav-link" data-section="datosPersonales">
+                <i class="fas fa-user me-2"></i>Datos Personales
+              </a>
+              <a class="profile-nav-link" data-section="puntos">
+                <i class="fas fa-star me-2"></i>Mis Puntos
+              </a>
+              <a class="profile-nav-link" data-section="metodosPago">
+                <i class="fas fa-credit-card me-2"></i>Métodos de Pago
+              </a>
+              <a class="profile-nav-link" data-section="pedidosAnteriores">
+                <i class="fas fa-history me-2"></i>Historial de Pedidos
+              </a>
+              <a class="profile-nav-link" data-section="configuracion">
+                <i class="fas fa-cog me-2"></i>Configuración
+              </a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="col-lg-9 col-md-8">
+          <!-- Principal -->
+          <div class="profile-section active" data-section="inicio">
+            <div class="row g-4">
+              <div class="col-12">
+                <div class="welcome-card bg-gradient-primary text-white rounded-3 p-4 mb-4">
+                  <div class="row align-items-center">
+                    <div class="col-md-8">
+                      <h2 class="fw-bold mb-2">¡Bienvenido, Juan! 👋</h2>
+                      <p class="mb-3 opacity-90">Bienvenido de vuelta a La Esquina. ¿Listo para tu próximo café?</p>
+                      <a href="menu.html" class="btn btn-light btn-lg">
+                        <i class="fas fa-coffee me-2"></i>Hacer Pedido
+                      </a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <div class="welcome-icon">
+                        <i class="fas fa-coffee fa-4x opacity-75"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="stat-card">
+                  <div class="stat-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h3 class="stat-number">23</h3>
+                    <p class="stat-label">Pedidos Realizados</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="stat-card">
+                  <div class="stat-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h3 class="stat-number">125</h3>
+                    <p class="stat-label">Puntos Acumulados</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="stat-card">
+                  <div class="stat-icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <div class="stat-content">
+                    <h3 class="stat-number">5</h3>
+                    <p class="stat-label">Productos Favoritos</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-header bg-white border-0 py-3">
+                    <h5 class="fw-bold mb-0">
+                      <i class="fas fa-clock me-2 text-primary"></i>Pedidos Recientes
+                    </h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="recent-order mb-3">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                          <h6 class="fw-bold mb-1">Pedido #K2351</h6>
+                          <p class="text-muted small mb-1">2x Café Frío, 1x Combo del Día</p>
+                          <p class="text-muted small mb-0">25 de Junio, 2024</p>
+                        </div>
+                        <div class="text-end">
+                          <span class="badge bg-success">Completado</span>
+                          <p class="fw-bold mb-0 mt-1">$6.500</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="recent-order">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                          <h6 class="fw-bold mb-1">Pedido #J2348</h6>
+                          <p class="text-muted small mb-1">1x Café de Autor, 1x Alfajor Artesanal</p>
+                          <p class="text-muted small mb-0">20 de Junio, 2024</p>
+                        </div>
+                        <div class="text-end">
+                          <span class="badge bg-success">Completado</span>
+                          <p class="fw-bold mb-0 mt-1">$4.300</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Datos Personales -->
+          <div class="profile-section" data-section="datosPersonales">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-white border-0 py-3">
+                <h4 class="fw-bold mb-0">
+                  <i class="fas fa-user me-2 text-primary"></i>Datos Personales
+                </h4>
+              </div>
+              <div class="card-body p-4">
+                <form id="form-datos-personales">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="nombre" class="form-label fw-medium">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" value="Juan" disabled>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="apellido" class="form-label fw-medium">Apellido</label>
+                      <input type="text" class="form-control" id="apellido" value="Pérez" disabled>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email-perfil" class="form-label fw-medium">Email</label>
+                      <input type="email" class="form-control" id="email-perfil" value="juan.perez@email.com" disabled>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="telefono-perfil" class="form-label fw-medium">Teléfono</label>
+                      <input type="tel" class="form-control" id="telefono-perfil" value="+54 9 11 1234 5678" disabled>
+                    </div>
+                    <div class="col-12">
+                      <label for="direccion" class="form-label fw-medium">Dirección</label>
+                      <input type="text" class="form-control" id="direccion" value="Av. Corrientes 1234, CABA" disabled>
+                    </div>
+                    <div class="col-12">
+                      <button type="button" class="btn btn-primary" id="btn-editar-datos">
+                        <i class="fas fa-edit me-2"></i>Editar Información
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Puntos -->
+          <div class="profile-section" data-section="puntos">
+            <div class="row g-4">
+              <div class="col-12">
+                <div class="points-header-card bg-gradient-warning text-white rounded-3 p-4">
+                  <div class="row align-items-center">
+                    <div class="col-md-8">
+                      <h3 class="fw-bold mb-2">
+                        <i class="fas fa-star me-2"></i>Tus Puntos La Esquina
+                      </h3>
+                      <p class="mb-3 opacity-90">Acumula puntos con cada compra y canjéalos por productos gratis</p>
+                      <div class="points-display">
+                        <span class="h1 fw-bold">125</span>
+                        <span class="h5 ms-2">puntos disponibles</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <i class="fas fa-trophy fa-4x opacity-75"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-body p-4 text-center">
+                    <i class="fas fa-gift fa-2x text-primary mb-3"></i>
+                    <h5 class="fw-bold mb-2">Próximo Premio</h5>
+                    <p class="text-muted mb-3">Te faltan 25 puntos para un café gratis</p>
+                    <div class="progress mb-3">
+                      <div class="progress-bar bg-primary" style="width: 83%"></div>
+                    </div>
+                    <small class="text-muted">125 de 150 puntos</small>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-md-6">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-body p-4 text-center">
+                    <i class="fas fa-chart-line fa-2x text-success mb-3"></i>
+                    <h5 class="fw-bold mb-2">Este Mes</h5>
+                    <p class="text-muted mb-3">Has ganado 45 puntos</p>
+                    <div class="d-flex justify-content-between small text-muted">
+                      <span>Mes anterior: 32</span>
+                      <span class="text-success">+40%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                  <div class="card-header bg-white border-0 py-3">
+                    <h5 class="fw-bold mb-0">Historial de Puntos</h5>
+                  </div>
+                  <div class="card-body">
+                    <div class="points-history">
+                      <div class="points-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div>
+                            <h6 class="fw-bold mb-1">Pedido #K2351</h6>
+                            <p class="text-muted small mb-0">25 de Junio, 2024</p>
+                          </div>
+                          <div class="text-end">
+                            <span class="text-success fw-bold">+15 puntos</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="points-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div>
+                            <h6 class="fw-bold mb-1">Pedido #J2348</h6>
+                            <p class="text-muted small mb-0">20 de Junio, 2024</p>
+                          </div>
+                          <div class="text-end">
+                            <span class="text-success fw-bold">+10 puntos</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Métodos de Pago -->
+          <div class="profile-section" data-section="metodosPago">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-white border-0 py-3">
+                <h4 class="fw-bold mb-0">
+                  <i class="fas fa-credit-card me-2 text-primary"></i>Métodos de Pago
+                </h4>
+              </div>
+              <div class="card-body p-4">
+                <div class="payment-methods mb-4">
+                  <div class="payment-method active mb-3">
+                    <div class="d-flex align-items-center">
+                      <div class="payment-icon me-3">
+                        <i class="fas fa-credit-card"></i>
+                      </div>
+                      <div class="flex-grow-1">
+                        <h6 class="fw-bold mb-1">Tarjeta terminada en 3456</h6>
+                        <p class="text-muted small mb-0">Visa • Vence 12/26</p>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="metodoPago" id="tarjeta1" checked>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="payment-method mb-3">
+                    <div class="d-flex align-items-center">
+                      <div class="payment-icon me-3">
+                        <i class="fas fa-money-bill-wave"></i>
+                      </div>
+                      <div class="flex-grow-1">
+                        <h6 class="fw-bold mb-1">Efectivo</h6>
+                        <p class="text-muted small mb-0">Pagar al retirar el pedido</p>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="metodoPago" id="efectivo">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="add-payment-method">
+                  <h6 class="fw-bold mb-3">Agregar Nueva Tarjeta</h6>
+                  <form class="row g-3">
+                    <div class="col-md-8">
+                      <input type="text" class="form-control" placeholder="Número de tarjeta" maxlength="19">
+                    </div>
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-primary w-100">
+                        <i class="fas fa-plus me-2"></i>Agregar
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Historial de Pedidos -->
+          <div class="profile-section" data-section="pedidosAnteriores">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-white border-0 py-3">
+                <h4 class="fw-bold mb-0">
+                  <i class="fas fa-history me-2 text-primary"></i>Historial de Pedidos
+                </h4>
+              </div>
+              <div class="card-body p-4">
+                <div class="orders-list">
+                  <div class="order-item">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h6 class="fw-bold mb-1">Pedido #K2351</h6>
+                        <p class="text-muted small mb-1">Código: M432 • 25 de Junio, 2024</p>
+                        <ul class="order-products mb-0">
+                          <li>2x Café Frío</li>
+                          <li>1x Combo del Día</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-4 text-md-end">
+                        <span class="badge bg-success mb-2">Completado</span>
+                        <p class="fw-bold mb-1">$6.500</p>
+                        <button class="btn btn-outline-primary btn-sm">
+                          <i class="fas fa-redo me-1"></i>Repetir
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="order-item">
+                    <div class="row align-items-center">
+                      <div class="col-md-8">
+                        <h6 class="fw-bold mb-1">Pedido #J2348</h6>
+                        <p class="text-muted small mb-1">Código: K120 • 20 de Junio, 2024</p>
+                        <ul class="order-products mb-0">
+                          <li>1x Café de Autor</li>
+                          <li>1x Alfajor Artesanal</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-4 text-md-end">
+                        <span class="badge bg-success mb-2">Completado</span>
+                        <p class="fw-bold mb-1">$4.300</p>
+                        <button class="btn btn-outline-primary btn-sm">
+                          <i class="fas fa-redo me-1"></i>Repetir
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Configuración -->
+          <div class="profile-section" data-section="configuracion">
+            <div class="card border-0 shadow-sm">
+              <div class="card-header bg-white border-0 py-3">
+                <h4 class="fw-bold mb-0">
+                  <i class="fas fa-cog me-2 text-primary"></i>Configuración
+                </h4>
+              </div>
+              <div class="card-body p-4">
+                <div class="settings-section mb-4">
+                  <h6 class="fw-bold mb-3">Notificaciones</h6>
+                  <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="notif-email" checked>
+                    <label class="form-check-label" for="notif-email">
+                      Recibir notificaciones por email
+                    </label>
+                  </div>
+                  <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="notif-pedido" checked>
+                    <label class="form-check-label" for="notif-pedido">
+                      Notificar cuando el pedido esté listo
+                    </label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="notif-promociones">
+                    <label class="form-check-label" for="notif-promociones">
+                      Recibir promociones y ofertas especiales
+                    </label>
+                  </div>
+                </div>
+                
+                <div class="settings-section mb-4">
+                  <h6 class="fw-bold mb-3">Privacidad</h6>
+                  <div class="form-check form-switch mb-2">
+                    <input class="form-check-input" type="checkbox" id="perfil-publico">
+                    <label class="form-check-label" for="perfil-publico">
+                      Perfil público
+                    </label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="compartir-datos">
+                    <label class="form-check-label" for="compartir-datos">
+                      Compartir datos para mejorar la experiencia
+                    </label>
+                  </div>
+                </div>
+                
+                <div class="settings-section">
+                  <h6 class="fw-bold mb-3">Cuenta</h6>
+                  <button class="btn btn-outline-primary me-2 mb-2">
+                    <i class="fas fa-key me-2"></i>Cambiar Contraseña
+                  </button>
+                  <button class="btn btn-outline-danger mb-2">
+                    <i class="fas fa-trash me-2"></i>Eliminar Cuenta
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-esquina py-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="img/logo.png" alt="Logo La Esquina" class="footer-logo me-2">
+            <span class="h5 mb-0 text-primary fw-bold">La Esquina</span>
+          </div>
+          <p class="text-muted mb-3">El mejor café artesanal de la ciudad. Calidad premium sin esperas.</p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-3">Enlaces</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="footer-link">Inicio</a></li>
+            <li class="mb-2"><a href="menu.html" class="footer-link">Menú</a></li>
+            <li class="mb-2"><a href="nosotros.html" class="footer-link">Nosotros</a></li>
+            <li class="mb-2"><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Información</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="footer-link">Términos y Condiciones</a></li>
+            <li class="mb-2"><a href="#" class="footer-link">Política de Privacidad</a></li>
+            <li class="mb-2"><a href="ayuda.html" class="footer-link">Ayuda</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Contacto</h6>
+          <div class="contact-info">
+            <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Av. Siempre Viva 123, CABA</p>
+            <p class="mb-2"><i class="fas fa-phone me-2 text-primary"></i>+54 9 11 1234 5678</p>
+            <p class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i>info@laesquina.com</p>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 text-muted small">© 2024 La Esquina. Todos los derechos reservados.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0 text-muted small">
+            <strong>Grupo 9:</strong> Rodrigo, Juan Manuel Meluzio, Carolina Degrossi, Maria Fernanda, Di Nocera Maria Virginia, Tomas Navatta
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".profile-nav-link");
+  const sections = document.querySelectorAll(".profile-section");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      // Remover clase activa de todos los links
+      navLinks.forEach(l => l.classList.remove("active"));
+
+      // Ocultar todas las secciones
+      sections.forEach(section => section.classList.remove("active"));
+
+      // Agregar clase activa al link actual
+      link.classList.add("active");
+
+      // Mostrar la sección correspondiente
+      const target = link.getAttribute("data-section");
+      const targetSection = document.querySelector(`.profile-section[data-section="${target}"]`);
+      if (targetSection) {
+        targetSection.classList.add("active");
+      }
+    });
+  });
+});
+
+   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

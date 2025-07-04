@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayuda - La Esquina - Grupo 9: Rodrigo, Juan Manuel Meluzio, Carolina Degrossi, Maria Fernanda, Di Nocera Maria Virginia, Tomas Navatta - Comisión 2024</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/ayuda.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-esquina">
+
+  <!-- Header -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3 py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/logo.png" alt="Logo La Esquina" class="logo-img me-2">
+          <span class="brand-text">La Esquina</span>
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="index.html">
+                <i class="fas fa-home me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="menu.html">
+                <i class="fas fa-coffee me-1"></i>Pedido
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="nosotros.html">
+                <i class="fas fa-users me-1"></i>Nosotros
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="contacto.html">
+                <i class="fas fa-envelope me-1"></i>Contacto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="perfil.html">
+                <i class="fas fa-user me-1"></i>Bienvenido Juan
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="help-hero py-5">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold text-primary mb-3">Centro de Ayuda</h1>
+          <p class="lead text-muted">Encuentra respuestas a las preguntas más frecuentes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- FAQ Section -->
+        <div class="col-lg-8">
+          <div class="faq-section">
+            <h2 class="h3 fw-bold text-primary mb-4">
+              <i class="fas fa-question-circle me-2"></i>Preguntas Frecuentes
+            </h2>
+            
+            <div class="accordion" id="faqAccordion">
+              <!-- FAQ Item 1 -->
+              <div class="accordion-item border-0 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    <i class="fas fa-shopping-cart me-2 text-primary"></i>
+                    ¿Cómo realizo un pedido?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>Realizar un pedido es muy sencillo:</p>
+                    <ol>
+                      <li>Ve a la sección <strong>Pedido</strong> desde el menú superior</li>
+                      <li>Selecciona los productos que desees del catálogo</li>
+                      <li>Ajusta las cantidades según tus preferencias</li>
+                      <li>Agrega los productos al carrito</li>
+                      <li>Confirma tu pedido y elige el método de pago</li>
+                      <li>Recibirás una notificación cuando esté listo para retirar</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="accordion-item border-0 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    <i class="fas fa-edit me-2 text-primary"></i>
+                    ¿Puedo modificar mi pedido una vez enviado?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>Sí, puedes modificar tu pedido siempre y cuando no haya comenzado su preparación.</p>
+                    <p>Para modificar un pedido:</p>
+                    <ul>
+                      <li>Ve a tu perfil y busca el pedido en "Pedidos Recientes"</li>
+                      <li>Si el estado es "Pedido Recibido", podrás cancelarlo</li>
+                      <li>Una vez cancelado, puedes realizar un nuevo pedido</li>
+                      <li>Si ya está "En Preparación", no podrá modificarse</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="accordion-item border-0 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    <i class="fas fa-credit-card me-2 text-primary"></i>
+                    ¿Qué formas de pago aceptan?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>Aceptamos múltiples formas de pago para tu comodidad:</p>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <h6 class="fw-bold">Pago Digital:</h6>
+                        <ul>
+                          <li>Tarjetas de crédito (Visa, Mastercard)</li>
+                          <li>Tarjetas de débito</li>
+                          <li>Mercado Pago</li>
+                          <li>Transferencia bancaria</li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <h6 class="fw-bold">Pago Presencial:</h6>
+                        <ul>
+                          <li>Efectivo al retirar</li>
+                          <li>Tarjeta de crédito/débito en el local</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="accordion-item border-0 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                    ¿Dónde retiro mi pedido?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>Retira tu pedido en nuestro local principal:</p>
+                    <div class="location-info bg-light rounded p-3 mb-3">
+                      <h6 class="fw-bold mb-2">
+                        <i class="fas fa-store me-2"></i>La Esquina - Local Principal
+                      </h6>
+                      <p class="mb-1">
+                        <i class="fas fa-map-marker-alt me-2"></i>Av. Siempre Viva 123, Ciudad Autónoma de Buenos Aires
+                      </p>
+                      <p class="mb-1">
+                        <i class="fas fa-clock me-2"></i>Lunes a Viernes: 7:00 - 20:00
+                      </p>
+                      <p class="mb-0">
+                        <i class="fas fa-phone me-2"></i>+54 9 11 1234 5678
+                      </p>
+                    </div>
+                    <p><strong>Importante:</strong> Presenta el código de retiro que recibirás por email o muestra esta pantalla al llegar.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="accordion-item border-0 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                    <i class="fas fa-clock me-2 text-primary"></i>
+                    ¿Cuánto tiempo tarda mi pedido?
+                  </button>
+                </h3>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>Los tiempos de preparación varían según el tipo de producto:</p>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="time-card">
+                          <h6 class="fw-bold text-primary">Bebidas Calientes</h6>
+                          <p class="mb-0">3-5 minutos</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="time-card">
+                          <h6 class="fw-bold text-primary">Bebidas Frías</h6>
+                          <p class="mb-0">2-4 minutos</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="time-card">
+                          <h6 class="fw-bold text-primary">Alfajores y Snacks</h6>
+                          <p class="mb-0">1-2 minutos</p>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="time-card">
+                          <h6 class="fw-bold text-primary">Tortas</h6>
+                          <p class="mb-0">2-3 minutos</p>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="mt-3"><strong>Nota:</strong> En horarios pico (8-10 AM y 2-4 PM) los tiempos pueden extenderse ligeramente.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 6 -->
+              <div class="accordion-item border-0 shadow-sm mb-3">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                    <i class="fas fa-star me-2 text-primary"></i>
+                    ¿Cómo funcionan los puntos de fidelidad?
+                  </button>
+                </h3>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    <p>Nuestro sistema de puntos te recompensa por tu fidelidad:</p>
+                    <div class="points-info">
+                      <h6 class="fw-bold">¿Cómo gano puntos?</h6>
+                      <ul>
+                        <li>1 punto por cada $100 gastados</li>
+                        <li>Puntos bonus en tu cumpleaños</li>
+                        <li>Promociones especiales ocasionales</li>
+                      </ul>
+                      
+                      <h6 class="fw-bold mt-3">¿Cómo uso mis puntos?</h6>
+                      <ul>
+                        <li>150 puntos = 1 café gratis</li>
+                        <li>100 puntos = 1 alfajor gratis</li>
+                        <li>300 puntos = 1 combo del día gratis</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+          <div class="help-sidebar">
+            <!-- Contact Card -->
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-body p-4">
+                <h5 class="fw-bold mb-3">
+                  <i class="fas fa-headset me-2 text-primary"></i>¿Necesitas más ayuda?
+                </h5>
+                <p class="text-muted mb-3">Si no encontraste la respuesta que buscabas, contáctanos directamente.</p>
+                <div class="d-grid gap-2">
+                  <a href="contacto.html" class="btn btn-primary">
+                    <i class="fas fa-envelope me-2"></i>Enviar Mensaje
+                  </a>
+                  <a href="tel:+5491112345678" class="btn btn-outline-primary">
+                    <i class="fas fa-phone me-2"></i>Llamar Ahora
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-body p-4">
+                <h6 class="fw-bold mb-3">Enlaces Rápidos</h6>
+                <div class="quick-links">
+                  <a href="menu.html" class="quick-link">
+                    <i class="fas fa-coffee me-2"></i>Hacer un Pedido
+                  </a>
+                  <a href="perfil.html" class="quick-link">
+                    <i class="fas fa-user me-2"></i>Mi Perfil
+                  </a>
+                  <a href="estado-pedido.html" class="quick-link">
+                    <i class="fas fa-clock me-2"></i>Estado del Pedido
+                  </a>
+                  <a href="nosotros.html" class="quick-link">
+                    <i class="fas fa-info-circle me-2"></i>Sobre Nosotros
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hours Card -->
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h6 class="fw-bold mb-3">
+                  <i class="fas fa-clock me-2 text-primary"></i>Horarios de Atención
+                </h6>
+                <div class="hours-list">
+                  <div class="hours-item">
+                    <span class="day">Lunes - Viernes</span>
+                    <span class="time">7:00 - 20:00</span>
+                  </div>
+                  <div class="hours-item">
+                    <span class="day">Sábados</span>
+                    <span class="time">8:00 - 18:00</span>
+                  </div>
+                  <div class="hours-item">
+                    <span class="day">Domingos</span>
+                    <span class="time">9:00 - 16:00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-esquina py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center mb-3">
+            <img src="img/logo.png" alt="Logo La Esquina" class="footer-logo me-2">
+            <span class="h5 mb-0 text-primary fw-bold">La Esquina</span>
+          </div>
+          <p class="text-muted mb-3">El mejor café artesanal de la ciudad. Calidad premium sin esperas.</p>
+          <div class="social-links">
+            <a href="#" class="social-link me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link me-3"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-3">Enlaces</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="footer-link">Inicio</a></li>
+            <li class="mb-2"><a href="menu.html" class="footer-link">Menú</a></li>
+            <li class="mb-2"><a href="nosotros.html" class="footer-link">Nosotros</a></li>
+            <li class="mb-2"><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Información</h6>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="footer-link">Términos y Condiciones</a></li>
+            <li class="mb-2"><a href="#" class="footer-link">Política de Privacidad</a></li>
+            <li class="mb-2"><a href="ayuda.html" class="footer-link">Ayuda</a></li>
+            <li class="mb-2"><a href="#" class="footer-link">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Contacto</h6>
+          <div class="contact-info">
+            <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Av. Siempre Viva 123, CABA</p>
+            <p class="mb-2"><i class="fas fa-phone me-2 text-primary"></i>+54 9 11 1234 5678</p>
+            <p class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i>info@laesquina.com</p>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 text-muted small">© 2024 La Esquina. Todos los derechos reservados.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0 text-muted small">
+            <strong>Grupo 9:</strong> Rodrigo, Juan Manuel Meluzio, Carolina Degrossi, Maria Fernanda, Di Nocera Maria Virginia, Tomas Navatta
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
