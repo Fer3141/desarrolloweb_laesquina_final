@@ -282,7 +282,7 @@ h6 {
 
 /* Footer */
 .footer-esquina {
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  background: var(--secondary-color);
   border-top: 1px solid #dee2e6;
 }
 
